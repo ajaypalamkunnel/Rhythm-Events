@@ -14,7 +14,7 @@ export default function Hero() {
   const [videoIndex, setVideoIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative min-h-[91svh] sm:min-h-[100svh] flex items-center justify-center pt-22 pb-8 sm:pt-40 sm:pb-10 overflow-hidden">
+    <section className="relative min-h-[92svh] sm:min-h-[100svh] flex items-center justify-center pt-28 pb-8 sm:pt-40 sm:pb-10 overflow-hidden">
       {/* Background Images: Dedicated Mobile Image for mobile screens & Desktop Image for tablet/desktop */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Mobile Background Image */}
@@ -51,7 +51,7 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/4 w-60 sm:w-72 h-60 sm:h-72 bg-brand-gold/15 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-64 sm:w-80 h-64 sm:h-80 bg-brand-goldLight/15 rounded-full blur-[110px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center mt-2 sm:mt-8">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center mt-6 sm:mt-8">
         {/* Headline - Balanced Typography */}
         <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.18] max-w-4xl drop-shadow-md">
           Creating Moments,{" "}
