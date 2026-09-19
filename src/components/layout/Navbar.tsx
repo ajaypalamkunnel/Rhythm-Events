@@ -16,7 +16,6 @@ const navLinks = [
   { name: "Gallery", href: "#gallery" },
   { name: "Why Us", href: "#why-us" },
   { name: "Reviews", href: "#testimonials" },
-  { name: "Estimate", href: "#quote-calculator" },
   { name: "Contact", href: "#contact" },
 ];
 

@@ -11,12 +11,12 @@ export const siteConfig = {
     "Couples, families, corporate clients, and individuals looking for bespoke wedding and event planning, master floral styling, and flawless event coordination.",
   unique_value_proposition:
     "Creative event concepts, handcrafted floral artistry, personalized 3D stage visualizations, and dependable end-to-end coordination tailored to every client's dream and budget.",
-  years_of_experience: "8+",
+  years_of_experience: "35+",
   stats: [
-    { label: "Years of Excellence", value: "8+", numeric: 8, suffix: "+" },
-    { label: "Weddings & Events Crafted", value: "500+", numeric: 500, suffix: "+" },
-    { label: "Happy Couples & Families", value: "1200+", numeric: 1200, suffix: "+" },
-    { label: "Client Satisfaction Rating", value: "4.9/5", numeric: 99, suffix: "%" },
+    { label: "Years of Mastery", value: "35+", numeric: 35, suffix: "+" },
+    { label: "Weddings Crafted", value: "1000+", numeric: 1000, suffix: "+" },
+    { label: "Happy Families", value: "2500+", numeric: 2500, suffix: "+" },
+    { label: "Satisfaction Rating", value: "4.9/5", numeric: 99, suffix: "%" },
   ],
   location: {
     address: "Rhythm Weddings and Events, Main Road",
@@ -607,8 +607,8 @@ export const testimonialsData: TestimonialItem[] = [
 
 export const whyChooseUsData = [
   {
-    title: "8+ Years of Proven Mastery",
-    desc: "Over 500+ successful weddings and milestone celebrations executed flawlessly across Kottayam and Kerala.",
+    title: "35+ Years of Proven Mastery",
+    desc: "Over 35 years and 1000+ successful weddings and milestone celebrations executed flawlessly across Kottayam and Kerala.",
     icon: "Award",
   },
   {
@@ -652,28 +652,28 @@ export const partnerVenues = [
 
 export const timelineMilestones = [
   {
-    year: "2016",
-    title: "The Genesis in Pala",
-    desc: "Founded with a passion to bring modern, luxury floral and stage design to Central Kerala.",
+    year: "1990s",
+    title: "The Legacy Begins in Pala",
+    desc: "Pioneered grand wedding and stage floral decoration across Central Travancore.",
+  },
+  {
+    year: "2005",
+    title: "500+ Milestone Celebrations",
+    desc: "Established dedicated in-house carpentry, metal truss fabrication, and cold floral warehousing.",
   },
   {
     year: "2018",
-    title: "100+ Weddings Milestone",
-    desc: "Expanded in-house production with dedicated metalwork, carpentry, and floral cold-storage facilities.",
-  },
-  {
-    year: "2021",
     title: "Pioneering 3D Stage Renders",
-    desc: "Introduced photorealistic 3D visualization for couples, setting new benchmark in Kottayam wedding styling.",
+    desc: "Introduced photorealistic 3D visualization for couples, setting a new benchmark in Kerala wedding styling.",
   },
   {
-    year: "2024",
-    title: "Full-Scale Event Production",
-    desc: "Scaled to 360-degree event management covering destination weddings across Kumarakom and Kochi.",
+    year: "2022",
+    title: "Turnkey Luxury Event Production",
+    desc: "Expanded to 360-degree event management covering destination weddings in Kumarakom and Kochi.",
   },
   {
     year: "Present",
-    title: "500+ Celebrations & Growing",
-    desc: "Recognized as the premier luxury wedding and event planning team in Pala and Kottayam.",
+    title: "35+ Years & 1000+ Weddings",
+    desc: "Recognized as Central Kerala's most trusted name in luxury weddings and bespoke event design.",
   },
 ];

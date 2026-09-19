@@ -8,7 +8,6 @@ import VideoReel from "@/components/sections/VideoReel";
 import PartnersMarquee from "@/components/sections/PartnersMarquee";
 import Gallery from "@/components/sections/Gallery";
 import Testimonials from "@/components/sections/Testimonials";
-import QuoteCalculator from "@/components/sections/QuoteCalculator";
 import Contact from "@/components/sections/Contact";
 
 export default function HomePage() {
@@ -23,7 +22,6 @@ export default function HomePage() {
       <VideoReel />
       <Gallery />
       <Testimonials />
-      <QuoteCalculator />
       <Contact />
     </>
   );

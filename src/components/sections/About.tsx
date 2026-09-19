@@ -61,10 +61,10 @@ export default function About() {
               {/* Years of Experience Badge */}
               <div className="absolute -top-6 -left-4 sm:-left-6 px-5 py-4 rounded-2xl bg-gradient-to-br from-brand-gold via-brand-goldDark to-brand-darker text-brand-darker font-bold shadow-2xl border border-brand-goldLight">
                 <div className="font-serif text-3xl sm:text-4xl leading-none text-brand-darker">
-                  8+
+                  35+
                 </div>
                 <div className="text-[11px] uppercase tracking-wider text-black font-semibold mt-1">
-                  Years Experience
+                  Years Heritage
                 </div>
               </div>
             </ScrollReveal>
@@ -75,7 +75,7 @@ export default function About() {
             <ScrollReveal direction="left" duration={0.8}>
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-xs font-semibold text-brand-goldLight">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>Crafted for Perfection</span>
+                <span>35+ Years of Proven Craft</span>
               </div>
 
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white leading-snug">
@@ -83,7 +83,7 @@ export default function About() {
               </h3>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Headquartered in <strong className="text-brand-goldLight">Pala, Kottayam</strong>, Rhythm Weddings and Events was founded with a singular ambition: to replace generic banquet templates with bespoke, high-fashion event environments.
+                Headquartered in <strong className="text-brand-goldLight">Pala, Kottayam</strong> for over 35 years, Rhythm Weddings and Events has been the gold standard for memorable wedding styling and event orchestration in Central Travancore.
               </p>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
@@ -149,14 +149,14 @@ export default function About() {
           </ScrollReveal>
         </div>
 
-        {/* 8-Year Evolution Timeline */}
+        {/* 35-Year Evolution Timeline */}
         <div className="pt-4">
           <div className="text-center mb-12">
             <span className="text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold block mb-2">
               Our Journey
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
-              8+ Years of Milestone Celebrations
+              35+ Years of Milestone Celebrations
             </h3>
           </div>
 

@@ -126,8 +126,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#quote-calculator" className="hover:text-brand-goldLight transition-colors">
-                  Event Estimator
+                <a href="#contact" className="hover:text-brand-goldLight transition-colors">
+                  Contact & Location
                 </a>
               </li>
             </ul>
