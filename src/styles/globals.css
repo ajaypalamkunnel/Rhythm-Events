@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #060a12;
+    --bg-surface: #0b1220;
+    --bg-surface-elevated: #111a2d;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --accent-gold: #c9a24d;
+    --accent-gold-light: #e8c97a;
+    --accent-gold-dark: #9a782d;
+    --border-glass: rgba(201, 162, 77, 0.22);
+    --border-glass-subtle: rgba(255, 255, 255, 0.08);
+    --card-glass: rgba(11, 18, 32, 0.72);
+  }
+
+  .light {
+    --bg-main: #faf8f5;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #f5f0e6;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --accent-gold: #b38933;
+    --accent-gold-light: #c9a24d;
+    --accent-gold-dark: #82601c;
+    --border-glass: rgba(179, 137, 51, 0.28);
+    --border-glass-subtle: rgba(0, 0, 0, 0.08);
+    --card-glass: rgba(255, 255, 255, 0.82);
+  }
+
+  * {
+    border-color: var(--border-glass-subtle);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  html.light {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #c9a24d;
+    color: #060a12;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #060a12;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #c9a24d 0%, #82601c 100%);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e8c97a;
+  }
+}
+
+@layer components {
+  /* Luxury Gold Gradient Text */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #fae9be 0%, #e8c97a 30%, #c9a24d 70%, #9a782d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-silver-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Glassmorphism Cards */
+  .glass-card {
+    background: var(--card-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-glass-subtle);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .glass-card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card-hover:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-glass);
+    box-shadow: 0 16px 40px -10px rgba(201, 162, 77, 0.22);
+  }
+
+  .glass-pill {
+    background: rgba(201, 162, 77, 0.1);
+    border: 1px solid rgba(201, 162, 77, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  .glass-nav {
+    background: rgba(6, 10, 18, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201, 162, 77, 0.15);
+  }
+
+  .light .glass-nav {
+    background: rgba(250, 248, 245, 0.85);
+    border-bottom: 1px solid rgba(179, 137, 51, 0.2);
+  }
+
+  /* Shimmer button effect */
+  .btn-gold {
+    background: linear-gradient(135deg, #e8c97a 0%, #c9a24d 50%, #9a782d 100%);
+    color: #060a12;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .btn-gold:hover {
+    box-shadow: 0 0 25px rgba(201, 162, 77, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-gold::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.35);
+    transform: rotate(25deg);
+    transition: all 0.75s ease;
+  }
+
+  .btn-gold:hover::after {
+    left: 140%;
+  }
+
+  .btn-outline-gold {
+    background: transparent;
+    border: 1px solid rgba(201, 162, 77, 0.5);
+    color: #e8c97a;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline-gold:hover {
+    background: rgba(201, 162, 77, 0.12);
+    border-color: #e8c97a;
+    box-shadow: 0 0 20px rgba(201, 162, 77, 0.25);
+    transform: translateY(-2px);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
