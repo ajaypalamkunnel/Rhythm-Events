@@ -119,7 +119,7 @@ export default function Hero() {
             className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-brand-goldLight text-[11px] font-medium transition-colors"
           >
             <Play className="w-3 h-3 fill-brand-gold text-brand-gold" />
-            <span>Watch Live Stage Reel (1 Min)</span>
+            <span>Watch Live Stage Reel</span>
           </button>
         </div>
 
@@ -155,8 +155,8 @@ export default function Hero() {
           </button>
         </div>
 
-        {/* Quick Stats Card - Breathable & Compact on Mobile */}
-        <div className="mt-5 sm:mt-8 w-full max-w-2xl">
+        {/* Quick Stats Card - Positioned nicely towards the bottom on mobile */}
+        <div className="mt-8 sm:mt-8 w-full max-w-2xl">
           <GlassCard variant="elevated" className="py-3 px-2 sm:py-4 sm:px-6 border-brand-gold/30">
             <div className="grid grid-cols-4 gap-1 sm:gap-4 divide-x divide-white/10">
               {siteConfig.stats.map((stat, idx) => (
@@ -173,10 +173,10 @@ export default function Hero() {
           </GlassCard>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll Indicator - Positioned right above bottom */}
         <a
           href="#about"
-          className="mt-4 sm:mt-6 inline-flex flex-col items-center text-slate-300 hover:text-brand-gold transition-colors group"
+          className="mt-3 sm:mt-6 inline-flex flex-col items-center text-slate-300 hover:text-brand-gold transition-colors group"
           aria-label="Scroll to About Section"
         >
           <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-medium mb-0.5 text-slate-400 group-hover:text-brand-gold">
