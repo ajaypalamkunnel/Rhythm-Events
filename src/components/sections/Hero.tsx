@@ -11,7 +11,7 @@ import Lightbox from "../ui/Lightbox";
 import { galleryMedia } from "@/config/site";
 
 export default function Hero() {
-  const [videoOpen, setVideoOpen] = useState(false);
+  const [videoIndex, setVideoIndex] = useState<number | null>(null);
 
   return (
     <section className="relative min-h-[90svh] sm:min-h-[100svh] flex items-center justify-center pt-20 pb-8 sm:pt-32 sm:pb-16 overflow-hidden">
@@ -115,7 +115,7 @@ export default function Hero() {
 
           {/* Clean small video reel trigger button */}
           <button
-            onClick={() => setVideoOpen(true)}
+            onClick={() => setVideoIndex(0)}
             className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-brand-goldLight text-[11px] font-medium transition-colors"
           >
             <Play className="w-3 h-3 fill-brand-gold text-brand-gold" />
@@ -145,7 +145,7 @@ export default function Hero() {
           </Button>
 
           <button
-            onClick={() => setVideoOpen(true)}
+            onClick={() => setVideoIndex(0)}
             className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-brand-dark/80 hover:bg-brand-gold/20 border border-brand-gold/40 text-brand-goldLight text-sm font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-md"
           >
             <div className="w-5 h-5 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center shadow">
@@ -155,16 +155,16 @@ export default function Hero() {
           </button>
         </div>
 
-        {/* Quick Stats Card - Positioned nicely towards the bottom on mobile */}
-        <div className="mt-8 sm:mt-8 w-full max-w-2xl">
-          <GlassCard variant="elevated" className="py-3 px-2 sm:py-4 sm:px-6 border-brand-gold/30">
+        {/* Quick Stats Card - 4 Columns on all devices, shifted down towards the bottom on mobile */}
+        <div className="mt-20 sm:mt-8 w-full max-w-2xl">
+          <GlassCard variant="elevated" className="py-3 px-1.5 sm:py-4 sm:px-6 border-brand-gold/30 shadow-lg">
             <div className="grid grid-cols-4 gap-1 sm:gap-4 divide-x divide-white/10">
               {siteConfig.stats.map((stat, idx) => (
-                <div key={idx} className="flex flex-col items-center justify-center px-1">
-                  <div className="font-serif text-lg sm:text-2xl font-bold text-gold-gradient leading-none">
+                <div key={idx} className="flex flex-col items-center justify-center px-0.5 sm:px-1">
+                  <div className="font-serif text-base sm:text-2xl font-bold text-gold-gradient leading-none">
                     <Counter end={stat.numeric} suffix={stat.suffix} />
                   </div>
-                  <div className="text-[9px] sm:text-xs text-slate-300 mt-1 font-medium text-center line-clamp-1">
+                  <div className="text-[8.5px] sm:text-xs text-slate-300 mt-1 font-medium text-center line-clamp-1">
                     {stat.label}
                   </div>
                 </div>
@@ -173,7 +173,7 @@ export default function Hero() {
           </GlassCard>
         </div>
 
-        {/* Scroll Indicator - Positioned right above bottom */}
+        {/* Scroll Indicator - Positioned right at the bottom edge */}
         <a
           href="#about"
           className="mt-3 sm:mt-6 inline-flex flex-col items-center text-slate-300 hover:text-brand-gold transition-colors group"
@@ -186,13 +186,13 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* Video Reel Lightbox Modal */}
-      {videoOpen && (
+      {/* Video Reel Lightbox Modal with Full Left/Right Navigation */}
+      {videoIndex !== null && (
         <Lightbox
           items={galleryMedia.filter((m) => m.type === "video")}
-          currentIndex={0}
-          onClose={() => setVideoOpen(false)}
-          onNavigate={() => {}}
+          currentIndex={videoIndex}
+          onClose={() => setVideoIndex(null)}
+          onNavigate={(newIdx) => setVideoIndex(newIdx)}
         />
       )}
     </section>
